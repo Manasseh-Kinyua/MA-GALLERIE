@@ -43,17 +43,27 @@
       <div class="row">
         <div class="col-md-3">
           <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              Categories
+            </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Categories</li>
+              <li class="list-group-item">Cras justo odio</li>
               <li class="list-group-item">Dapibus ac facilisis in</li>
               <li class="list-group-item">Vestibulum at eros</li>
             </ul>
           </div>
         </div>
         <div class="col-md-9">
-          {% for image in images %}
-          <img src="{{image.image.url}}" alt="">
-          {% endfor %}
+          <div class="row">
+            {% for image in images %}
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="{{image.image.url}}" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>
