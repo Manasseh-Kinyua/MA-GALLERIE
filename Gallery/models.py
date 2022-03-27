@@ -21,5 +21,10 @@ class Image(models.Model):
     image_category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
     image_location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True)
 
+    @classmethod
+    def search_image(cls, category):
+        images = cls.objects.filter(image_category__name__icontains=category)
+        return images
+
     class Meta:
         ordering = ['image_name']
