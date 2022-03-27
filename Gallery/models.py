@@ -1,22 +1,25 @@
+from unicodedata import name
 from django.db import models
 
 # Create your models here.
-class Image(models.Model):
-    image = models.ImageField(upload_to = 'photos/', null = True)
-    image_name = models.CharField(max_length = 50)
-    description = models.TextField()
+class Category(models.Model):
+    name = models.CharField(max_length = 50)
 
     def __str__(self):
-        return self.image_name
+        return self.name
 
-class Category(models.Model):
-    name = models.CharField(max_length = 100)
+class Location(models.Model):
+    location = models.CharField(max_length = 50)
 
     def __str__(self):
         return self.location
 
-class Location(models.Model):
-    location = models.CharField(max_length = 100)
+class Image(models.Model):
+    image = models.ImageField(upload_to = 'photos/')
+    image_name = models.CharField(max_length = 50)
+    image_description = models.TextField()
+    image_category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
+    image_location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True)
 
-
-
+    class Meta:
+        ordering = ['image_name']
