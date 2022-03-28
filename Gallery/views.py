@@ -9,8 +9,8 @@ def gallery(request):
     locations = Location.objects.all()
     return render(request, 'Gallery/gallery.html', {"images": images, "locations":locations})
 
-def photo(request, image_id):
-    image = Image.objects.get(id = image_id) 
+def photo(request, pk):
+    image = Image.objects.get(id = pk) 
     return render(request, 'Gallery/photo.html', {"image":image})
 
 def search_results(request):

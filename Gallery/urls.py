@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.gallery, name = 'gallery'),
-    path('photo/(\d+)/', views.photo, name = 'photo'),
+    path('photo/<str:pk>/', views.photo, name = 'photo'),
     path('search/', views.search_results, name = 'search_results'),
 ]
 

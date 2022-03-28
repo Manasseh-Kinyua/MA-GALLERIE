@@ -75,7 +75,7 @@
               <div class="card-body">
                 <p class="card-text">{{ image.image_name }}</p>
               </div>
-              <a href="{% url 'photo' %}" class="btn btn-outline-dark btn-sm m-1">Expand</a>
+              <a href="{% url 'photo' image.id %}" class="btn btn-outline-dark btn-sm m-1">Expand</a>
             </div>
             {% endfor %}
           </div>
