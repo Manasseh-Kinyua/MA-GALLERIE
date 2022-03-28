@@ -78,4 +78,4 @@ If you have any question or contributions, please email me at [nassehkinyua99@gm
 ## License 
 
 * [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](https://github.com/Owiti-Charles/Picture-Globe/blob/master/LICENSE)  
-* Copyright (c) 2019 **Owiti Charles**
+* Copyright (c) 2019 **Manasseh Kinyua**
