@@ -58,9 +58,9 @@
               Locations
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">All</li>
+              <li class="list-group-item location"><a href="{% url 'gallery' %}">All</a></li>
               {% for location in locations %}
-              <li class="list-group-item">{{ location.location }}</li>
+              <li class="list-group-item location"><a href="{% url 'gallery' %}?location={{location.location}}">{{ location.location }}</a></li>
               {% empty %}
               No Locations
               {% endfor %}

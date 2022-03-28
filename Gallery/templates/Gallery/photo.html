@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{image.image_name}}</title>
 </head>
 <body>
     <div class="container">
-        
+        <div class="row">
+            <div class="col-md-7">
+                <img style="width: 100%; height: 90vh;" src="{{image.image.url}}" alt="">
+            </div>
+            <div class="col-md-5">
+                <p>Name: {{image.image_name}}</p>
+                <p>Description: {{image.image_description}}</p>
+                <p>Category: {{image.image_category}}</p>
+                <p>Location: {{image.image_location}}</p>
+            </div>
+        </div>
     </div>
     
 </body>

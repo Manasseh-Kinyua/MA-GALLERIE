@@ -1,11 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, Http404
 from .models import Category,Location,Image
 
 # Create your views here.
 def gallery(request):
+    location = request.GET.get("location")
+
+    if location == None:
+        locations = Location.objects.all()
+    else:
+        locations = Location.objects.filter(location__icontains=location)
+
     images = Image.objects.all()
-    # locations = Location.get_locations()
     locations = Location.objects.all()
     return render(request, 'Gallery/gallery.html', {"images": images, "locations":locations})
 
