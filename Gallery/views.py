@@ -7,6 +7,9 @@ def gallery(request):
     images = Image.objects.all()
     return render(request, 'Gallery/gallery.html', {"images": images})
 
+def photo(request):
+    return render(request, 'Gallery/photo.html')
+
 def search_results(request):
     if 'image' in request.GET and request.GET["image"]:
         category = request.GET.get("image")
