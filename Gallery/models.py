@@ -11,6 +11,14 @@ class Category(models.Model):
 class Location(models.Model):
     location = models.CharField(max_length = 50)
 
+    def save_location(self):
+        self.save()
+
+    @classmethod
+    def get_locations(cls):
+        locations = Location.objects.all()
+        return locations
+
     def __str__(self):
         return self.location
 
