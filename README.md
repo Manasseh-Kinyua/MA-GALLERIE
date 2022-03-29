@@ -7,7 +7,7 @@
 This is a Django application for personal gallery that allows a user to upload images for others to see and be able to to share by copying the image link.
   
 ##  Live Link  
- Click [View Site]()  to visit the site
+ Click [View Site](https://nassehgalerie.herokuapp.com/)  to visit the site
  
 ## User Story  
   
