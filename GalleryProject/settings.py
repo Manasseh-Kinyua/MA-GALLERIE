@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'Gallery.apps.GalleryConfig',
-    'bootstrap3'
+    'bootstrap3',
+    'decouple'
 ]
 
 MIDDLEWARE = [
